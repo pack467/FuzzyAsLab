@@ -1,0 +1,54 @@
+Tugas Akhir Sarjana Ilmu Komputer
+Universitas Islam Negeri Sumatera Utara – 2025
+Proyek: Model Pendukung Keputusan Pemilihan Calon Asisten Laboratorium menggunakan Logika Fuzzy Tsukamoto.
+
+1. Mulai
+   ↓
+2. Inisialisasi Variabel (kategori, rules, ruleId)
+   ↓
+3. Loop Kombinasi Nilai (Akademik, Tes, Kehlian, Etika, Komunikasi)
+   ├─▶ Untuk setiap kombinasi:
+   │     ↓
+   │   4. Tentukan Output
+   │     ↓
+   │   5. Ada 'Rendah' di Akademik/Tes/Keahlian?
+   │     ├─ YA ───▶ Output = 'Tidak Layak' ───┐
+   │     └─ TIDAK                            │
+   │        ↓                                 │
+   │       6. Jumlah 'Tinggi' ≥3?            │
+   │         ├─ YA ─▶ Output = 'Sangat Layak'─┤
+   │         └─ TIDAK─▶ Output = 'Cukup Layak'┘
+   │                                 ↓
+   │                               7. Simpan Rule & ruleId++
+   │                                 ↓
+   └─────────────── Kembali ke 3 ◀───┘
+   ↓
+9. Return Daftar Rules (243 aturan)
+   ↓
+10. Inisialisasi Active Rules
+   ↓
+11. Loop untuk Setiap Rule
+   ├─▶ Untuk setiap rule:
+   │     ↓
+   │   12. Inisialisasi Strength
+   │     ↓
+   │   13. Loop untuk Setiap Kondisi
+   │     ├─▶ Untuk setiap kondisi:
+   │     │     ↓
+   │     │   14. Dapatkan Nilai Keanggotaan
+   │     │     ↓
+   │     │   15. Tambahkan ke Strength[]
+   │     │     ↓
+   │     └───── Kembali ke 13 ◀─┘
+   │     ↓
+   │   16. Hitung α = min(Strength)
+   │     ↓
+   │   17. α > 0?
+   │     ├─ YA ───▶ Tambahkan ke activeRules ─┐
+   │     └─ TIDAK ─▶ Lewati Rule ────────────┘
+   │                                 ↓
+   └─────────────── Kembali ke 11 ◀──┘
+   ↓
+19. Return Active Rules
+   ↓
+20. Selesai

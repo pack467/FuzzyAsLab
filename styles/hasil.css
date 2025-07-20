@@ -1,0 +1,155 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #a5d6a7, #81c784);
+    background-size: cover;
+    background-position: center;
+    color: #2c3e50;
+    padding: 20px;
+    position: relative;
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+.container {
+    position: relative;
+    z-index: 1;
+}
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+.card-header {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+h4 {
+    margin-top: 20px;
+    color: #34495e;
+    font-weight: bold;
+}
+.calculation-table th {
+    background-color: #81c784;
+    color: white;
+}
+.calculation-table td {
+    background-color: #f9fbe7;
+}
+.alert {
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.result-sangat-layak {
+    background-color: #d1e7dd;
+}
+.result-cukup-layak {
+    background-color: #fff3cd;
+}
+.result-tidak-layak {
+    background-color: #f8d7da;
+}
+.result-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+}
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #6c757d;
+}
+.btn-custom {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.btn-custom:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.icon {
+    margin-right: 10px;
+}
+.nama-calon {
+    font-weight: bold;
+    font-size: 2.0rem;
+    color: #2c3e50;
+}
+.table-rules {
+    border-collapse: collapse;
+    width: 100%;
+}
+.table-rules th, .table-rules td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+.table-rules th {
+    background-color: #4caf50;
+    color: white;
+}
+.table-rules tbody tr {
+    background-color: #f9fbe7;
+}
+.scrollable-table {
+    max-height: 400px;
+    overflow-y: auto;
+    display: block;
+}
+.card-fuzzifikasi, .card-defuzzifikasi {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: none;
+}
+.card-fuzzifikasi .card-header, .card-defuzzifikasi .card-header {
+    background-color: #81c784;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+.card-fuzzifikasi .card-body, .card-defuzzifikasi .card-body {
+    padding: 20px;
+}
+.scrollable-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.table-center td {
+    text-align: center;
+}
+.chart-container {
+    display: none; /* Sembunyikan grafik awal */
+    margin-top: 20px;
+}
+.btn-chart {
+    margin-top: 10px;
+}
+.btn-close-chart {
+    background-color: #dc3545;
+    color: white;
+}

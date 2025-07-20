@@ -1,0 +1,313 @@
+/* daftar_hasil.css - Tema Hijau untuk Daftar Hasil Penilaian Calon Asisten Lab */
+
+/* Reset dan global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #edf7ed;
+  color: #2f3d2f;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Card utama */
+.card {
+  background: #fff;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(56, 161, 105, 0.2);
+  overflow: hidden;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #38a169 0%, #48bb78 100%);
+  color: #fff;
+  padding: 1.5rem;
+}
+
+.card-header h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.card-footer {
+  padding: 1rem 1.5rem;
+  background: #f0faf0;
+  border-top: 1px solid #c2e1c2;
+}
+
+/* Tombol aksi */
+.btn {
+  font-weight: 500;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn-primary {
+  background: #2f855a;
+  border-color: #2f855a;
+  box-shadow: 0 2px 8px rgba(47, 133, 90, 0.4);
+}
+
+.btn-primary:hover {
+  background: #276749;
+  border-color: #276749;
+}
+
+.btn-light {
+  background: #e6f4e6;
+  color: #2f3d2f;
+}
+
+.btn-detail {
+  background: #48bb78;
+  border-color: #48bb78;
+}
+
+.btn-detail:hover {
+  background: #38a169;
+}
+
+.btn-hapus {
+  background: #e53e3e;
+  border-color: #e53e3e;
+}
+
+.btn-hapus:hover {
+  background: #c53030;
+}
+
+/* Floating button */
+.floating-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2f855a;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(47, 133, 90, 0.4);
+  transition: transform 0.3s;
+  z-index: 100;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Avatar icon */
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c2e1c2;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #2f855a;
+}
+
+/* Tab navigasi */
+.nav-tabs .nav-link {
+  font-weight: 500;
+  color: #2f3d2f;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background: #2f855a;
+}
+
+.nav-tabs .nav-link:not(.active):hover {
+  background: #e6f4e6;
+}
+
+/* Tabel */
+.table {
+  border-collapse: separate;
+}
+
+.table thead th {
+  background: #f0faf0;
+  color: #2f3d2f;
+  font-weight: 600;
+  border-bottom: none;
+  padding: 0.75rem;
+}
+
+.table tbody tr {
+  transition: background 0.3s;
+}
+
+.table tbody tr:hover {
+  background: #e6f4e6;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+  padding: 0.75rem;
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.75rem;
+  transition: transform 0.3s;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+}
+
+/* Progress bars styling */
+.progress {
+  background: #c2e1c2;
+  height: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  transition: width 1s ease-in-out;
+}
+
+/* Icon styling */
+.fas {
+  transition: transform 0.3s;
+}
+
+.fas:hover {
+  transform: scale(1.2);
+}
+
+/* Info Footer */
+.card-footer .text-muted {
+  font-size: 0.9rem;
+}
+
+/* Tooltip overrides */
+.tooltip-inner {
+  background: #2f855a;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.tooltip-arrow::before {
+  border-top-color: #2f855a !important;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .card-header h2 {
+    font-size: 1.5rem;
+  }
+  .nav-tabs .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
+  .floating-btn {
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  .avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Footer margin spacing */
+.container .card-footer {
+  margin-top: 1rem;
+}
+
+/* Animasi masuk */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card, .table-responsive, .floating-btn {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Spesifik untuk badge kategori */
+.badge.bg-success {
+  background: #48bb78;
+}
+
+.badge.bg-warning {
+  background: #ecc94b;
+  color: #2f3d2f;
+}
+
+.badge.bg-danger {
+  background: #f56565;
+}
+
+/* Scrollbar kustom */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf7ed;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a3cfa0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #68ad68;
+}
